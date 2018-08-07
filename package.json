@@ -7,8 +7,8 @@
     "start": "node server.js",
     "build": "gulp",
     "prepublishOnly": "gulp",
-    "ss": "node server.js NODE_ENV=production -c ss.yml",
-    "ss-webgui": "node server.js NODE_ENV=production -c webgui.yml"
+    "ss": "pm2 --name=ss start server.js -- NODE_ENV=production -c ss.yml",
+    "ss-webgui": "pm2 --name=webgui start server.js -- NODE_ENV=production -c webgui.yml"
   },
   "author": "Gu Yuteng <igyteng@gmail.com>",
   "license": "GPL-3.0",
